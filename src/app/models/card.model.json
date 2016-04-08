@@ -1,0 +1,43 @@
+[
+  {
+    "company" : "ACE",
+    "description" : "ACE est un consortium d'assurance et de réassurance issu du regroupement de 34 sociétés, fondé en 1985 et entré en Bourse en 1993.",
+    "status" : "termine"
+  },
+  {
+    "company" : "AG2R",
+    "description" : "AG2R LA MONDIALE : 1er groupe de protection sociale",
+    "status" : "termine"
+  },
+  {
+    "company" : "ALLIANZ",
+    "description" : "ALLIANZ créé en 1890 à Berlin, est un groupe d'assurances, le premier assureur européen, et le cinquième gestionnaire d'actifs au monde2.",
+    "status" : "termine"
+  },
+  {
+    "company" : "AXA",
+    "description" : "Axa est un groupe international français spécialisé dans l'assurance depuis sa création, et dans la gestion d'actifs depuis 1994.",
+    "status" : "encours"
+  },
+  {
+    "company" : "AXA ASSISTANCE",
+    "description" : "AXA Assistance, filiale à 100 % du groupe AXA, est une société active dans l’assistance, avec près de 6 000 collaborateurs.",
+    "status" : "encours"
+  },
+  {
+    "company" : "CHARTIS",
+    "description" : "CHARTIS est un groupe international",
+    "status" : "nonevalue"
+  },
+  {
+    "company" : "CNP",
+    "description" : "CNP est une compagnie d'assurance de personnes en France. Elle est leader des secteurs de l'assurance-vie et de l'assurance emprunteur en France",
+    "status" : "nonevalue"
+  },
+  {
+    "company" : "GAN",
+    "description" : "GAN est une ancienne société anonyme d'assurances française. Elle fait partie du groupe Groupama depuis 1998.",
+    "status" : "nonevalue"
+  }
+
+]

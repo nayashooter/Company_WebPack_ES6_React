@@ -1,7 +1,11 @@
 import React      from 'react';
 import Jumbotron  from '../../components/jumbotron/Jumbotron.jsx';
+import cardmodel  from '../../models/card.model.json';
+import Card       from '../../components/card/card.jsx';
 import classNames from 'classnames';
 import { Link }   from 'react-router';
+import Immutable  from 'immutable';
+import { Input } from 'react-bootstrap';
 
 class Home extends React.Component {
   constructor(props) {
@@ -11,54 +15,76 @@ class Home extends React.Component {
 
   init() {
     this.state = {
-      animated    : true,
-      viewEnters  : false
+      //data: cardmodel,
+      filtre: ''
     };
   }
 
   componentWillMount() {
     this.state = {
-      viewEnters  : true
+      data: cardmodel,
+      filteredData: cardmodel,
+      filteredValue:this.state.filtre,
     };
   }
 
-  processViewAnimationClasses() {
-    const homeViewClasses = classNames({
-      'animatedViews'    : this.state.animated,
-      'view-enter'       : this.state.viewEnters
-    });
-    return homeViewClasses;
-  }
+filterData(event){
+  event.preventDefault();
+  let value = event.target.value;
+  this.state.filteredValue = value;
+  /*const filtered = [];
+  const dataS = this.state.data;
+  let value = event.target.value;
+
+  dataS.forEach(function(item){
+    if(item.company.toLowerCase().indexOf(value)!=-1)
+    {
+      filtered.push(item);
+    }
+  });
+
+  this.state.filteredData = filtered;*/
+  this.forceUpdate();
+}
 
   render() {
+    const filteredData = this.state.filteredData;
+    const filte = this.state.filteredValue;
+    const prettyRows   = filteredData
+                         .filter(function(key){
+                           return key && key.company.toLowerCase().indexOf(filte) != -1;
+                         })
+                         .map(function(dataCompany,i) {
+      return (
+        <div className="col-xs-3"><Card data={dataCompany} key={i} /></div>
+      );
+    });
+
     return(
-      <div
-        key="homeView"
-        className={this.processViewAnimationClasses()}>
-        <Jumbotron>
-          <h1>
-            Full ES2015 ReactJS + Bootstrap
-          </h1>
-          <h2>
-            with Hot Reload!!!
-          </h2>
-          <h2>
-            with React Router (SPA)
-          </h2>
-          <h1>
-            Starter
-          </h1>
-          <h1></h1>
-          <p>
-            <Link
-              className="btn btn-success btn-lg"
-              to={'/about'}>
-              <i className="fa fa-info"></i>
-              &nbsp;
-              go to about
-            </Link>
-          </p>
-        </Jumbotron>
+      <div>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="well well-sm text-center">
+                <h1>Bienvenue dans l'application d'évaluation des Assureurs</h1>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="panel panel-default">
+                <div className="panel-heading">
+                <h3 className="panel-title">Panel title</h3>
+                <Input
+                  type="text"
+                  value={this.state.filtre}
+                  onChange={this.filterData.bind(this)}
+                  ref="input"/>
+                </div>
+                <div className="panel-body">
+                { prettyRows}
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     );
   }

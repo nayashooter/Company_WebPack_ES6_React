@@ -1,5 +1,6 @@
 import React            from 'react';
 import { Link }         from 'react-router';
+let logoSiaci = require('../../images/logo.jpg');
 
 class NavigationBar extends React.Component {
 
@@ -57,7 +58,7 @@ class NavigationBar extends React.Component {
           <div className="navbar-header">
               {this.renderHumburger()}
               <a className="navbar-brand">
-                {this.props.brand}
+                <img alt="Brand" src={logoSiaci} />
               </a>
           </div>
           <div

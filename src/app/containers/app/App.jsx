@@ -2,6 +2,7 @@ import React            from 'react';
 import NavigationBar    from '../../components/navigation/NavigationBar.jsx';
 import navigationModel  from '../../models/navigation.model.json';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,7 @@ class App extends React.Component {
         <NavigationBar
           brand={this.state.navModel.brand}
           navModel={this.state.navModel}
+          logo={this.state.navModel.logo}
         />
         <div className="container-fluid">
           {this.props.children}
