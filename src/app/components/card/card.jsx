@@ -43,14 +43,16 @@ class Card extends React.Component {
   }
 
   render() {
-    let companylogo = {
+    const companylogo = {
       backgroundImage : 'url("https://placeimg.com/640/480/nature")'
     };
+
+    const status = this.getStatus();
 
     return (
       <div className="card card--small">
         <div className="card__image" style={companylogo}></div>
-        <h2 className="card__title">{this.getStatus()}{this.state.data.company}</h2><span className="card__subtitle">  {this.state.data.description}</span>
+        <h2 className="card__title">{status}{this.state.data.company}</h2><span className="card__subtitle">  {this.state.data.description}</span>
         <div className="card__action-bar">
           <div className="card__button">EVALUATE</div>
           <div className="card__button">SEE ALL</div>

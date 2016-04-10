@@ -15,50 +15,35 @@ class Home extends React.Component {
 
   init() {
     this.state = {
-      //data: cardmodel,
-      filtre: ''
+      data: null,
+      filteredData: null,
     };
   }
-
-  componentWillMount() {
+  componentWillMount(){
     this.state = {
       data: cardmodel,
       filteredData: cardmodel,
-      filteredValue:this.state.filtre,
     };
   }
 
-filterData(event){
-  event.preventDefault();
-  let value = event.target.value;
-  this.state.filteredValue = value;
-  /*const filtered = [];
-  const dataS = this.state.data;
-  let value = event.target.value;
+  filterData(event){
+    event.preventDefault();
+    const regex = new RegExp(event.target.value, 'i');
+      const filtered = this.state.data.filter((datum) => {
+        return (datum.company.search(regex) > -1);
+      });
 
-  dataS.forEach(function(item){
-    if(item.company.toLowerCase().indexOf(value)!=-1)
-    {
-      filtered.push(item);
-    }
-  });
+      this.setState({
+        filteredData: filtered
+      });
 
-  this.state.filteredData = filtered;*/
-  this.forceUpdate();
-}
+  }
 
   render() {
-    const filteredData = this.state.filteredData;
-    const filte = this.state.filteredValue;
-    const prettyRows   = filteredData
-                         .filter(function(key){
-                           return key && key.company.toLowerCase().indexOf(filte) != -1;
-                         })
-                         .map(function(dataCompany,i) {
-      return (
-        <div className="col-xs-3"><Card data={dataCompany} key={i} /></div>
-      );
-    });
+  const { filteredData } = this.state;
+   const items = filteredData.map((dataComFiltred,i) => {
+     return (  <div className="col-xs-3" key={i}><Card data={dataComFiltred}/></div>);
+   });
 
     return(
       <div>
@@ -73,14 +58,13 @@ filterData(event){
               <div className="panel panel-default">
                 <div className="panel-heading">
                 <h3 className="panel-title">Panel title</h3>
-                <Input
-                  type="text"
-                  value={this.state.filtre}
-                  onChange={this.filterData.bind(this)}
-                  ref="input"/>
+                  <input
+                   type='text'
+                   onChange={this.filterData.bind(this)}>
+                  </input>
                 </div>
                 <div className="panel-body">
-                { prettyRows}
+                { items}
                 </div>
               </div>
             </div>
@@ -88,6 +72,10 @@ filterData(event){
       </div>
     );
   }
+
+  _getInputValue() {
+   return ReactDom.findDOMNode(this).value;
+ }
 }
 
 export default Home;
