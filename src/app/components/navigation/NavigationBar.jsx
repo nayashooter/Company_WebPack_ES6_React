@@ -53,7 +53,7 @@ class NavigationBar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-default">
+      <nav className="navbar navbar-inverse">
         <div className="containersCustom">
           <div className="navbar-header">
               {this.renderHumburger()}

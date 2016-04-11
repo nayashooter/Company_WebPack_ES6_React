@@ -4,8 +4,7 @@ import cardmodel  from '../../models/card.model.json';
 import Card       from '../../components/card/card.jsx';
 import classNames from 'classnames';
 import { Link }   from 'react-router';
-import Immutable  from 'immutable';
-import { Input } from 'react-bootstrap';
+import { Input,Glyphicon } from 'react-bootstrap';
 
 class Home extends React.Component {
   constructor(props) {
@@ -40,10 +39,11 @@ class Home extends React.Component {
   }
 
   render() {
-  const { filteredData } = this.state;
-   const items = filteredData.map((dataComFiltred,i) => {
-     return (  <div className="col-xs-3" key={i}><Card data={dataComFiltred}/></div>);
-   });
+    const { filteredData } = this.state;
+    const items = filteredData.map((dataComFiltred,i) => {
+      return (  <div className="col-xs-3" key={i}><Card data={dataComFiltred}/></div>);
+    });
+    const innerGlyphicon = <Glyphicon glyph="search" />;
 
     return(
       <div>
@@ -55,16 +55,16 @@ class Home extends React.Component {
             </div>
 
             <div className="row">
-              <div className="panel panel-default">
+              <div className="panel panel-primary-vivinter">
                 <div className="panel-heading">
-                <h3 className="panel-title">Panel title</h3>
-                  <input
-                   type='text'
-                   onChange={this.filterData.bind(this)}>
-                  </input>
+                <Input
+                  type="text"
+                  onChange={this.filterData.bind(this)}
+                  addonAfter={innerGlyphicon}>
+                </Input>
                 </div>
                 <div className="panel-body">
-                { items}
+                  { items}
                 </div>
               </div>
             </div>

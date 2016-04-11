@@ -1,0 +1,24 @@
+.panel-primary-vivinter {
+  border-color: #7d7e7d;
+  border-style:dotted;
+}
+.panel-primary-vivinter > .panel-heading {
+    color: #fff;
+    background: #0e0e0e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0e0e0e 39%, #0e0e0e 42%, #7d7e7d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(39%,#0e0e0e), color-stop(42%,#0e0e0e), color-stop(100%,#7d7e7d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0e0e0e 39%,#0e0e0e 42%,#7d7e7d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0e0e0e 39%,#0e0e0e 42%,#7d7e7d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0e0e0e 39%,#0e0e0e 42%,#7d7e7d 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #0e0e0e 39%,#0e0e0e 42%,#7d7e7d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
+    border-color: #7d7e7d;
+}
+
+.panel-primary-vivinter > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #7d7e7d;
+}
+
+.panel-primary-vivinter > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #7d7e7d;
+}

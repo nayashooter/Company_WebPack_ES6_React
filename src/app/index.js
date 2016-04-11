@@ -10,6 +10,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './components/card/card.style.scss';
+import './components/itemevaluation/itemevaluation.style.scss';
 import '.'
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
