@@ -22,3 +22,20 @@
 .panel-primary-vivinter > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #7d7e7d;
 }
+
+.panel-heading{
+  white-space: nowrap;
+}
+
+.panel-body {
+  padding: 5px;
+}
+
+.delPadding{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.headerLine{
+  color:#EF7D0B;
+}

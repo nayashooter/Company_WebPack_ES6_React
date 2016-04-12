@@ -30,7 +30,7 @@ class ItemEvaluation extends React.Component {
 
         <div className="panel-body">
 
-          <div className="col-xs-2">
+          <div className="col-xs-3">
             <Note
               note={this.props.data.Note}
               onNoteChange={this.props.onNoteChange}
@@ -39,11 +39,11 @@ class ItemEvaluation extends React.Component {
               />
           </div>
 
-          <div className="col-xs-10" >
+          <div className="col-xs-9 delPadding" >
 
             <div className="well well-sm">
-              <h4 >
-                <span className="label label-warning">Référence</span>
+              <h4 className="headerLine">
+                <Glyphicon glyph="folder-open"/>&nbsp;<b>Référence</b>
               </h4>
               <Input
                 type="textarea"
@@ -54,8 +54,8 @@ class ItemEvaluation extends React.Component {
             </div>
 
             <div className="well well-sm">
-              <h4>
-                <span className="label label-warning">Commentaire</span>
+              <h4 className="headerLine">
+                <Glyphicon glyph="info-sign"/>&nbsp;<b>Commentaire</b>
               </h4>
               <Input
                 type="textarea"
@@ -68,7 +68,7 @@ class ItemEvaluation extends React.Component {
           </div>
 
         </div>
-        
+
       </div>
     )
   }

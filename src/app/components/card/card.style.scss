@@ -1,12 +1,12 @@
 .card {
   will-change: transform;
-  margin: 8px;
+  margin: 2px;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
   background-color: #ffffff;
-  height: 35%;
-  width: 364px;
+  height: 38%;
+  //width: 364px;
   -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.37);
@@ -122,7 +122,7 @@
   position: relative;
   display: inline-block;
   line-height: 52px;
-  padding: 0 16px;
+  padding: 0 8px;
   color: #FF1744;
 }
 .card--big {

@@ -32,8 +32,8 @@ class Note extends React.Component {
       <div className="counter">
         <h1>{this.props.note}</h1>
         <div className="buttonDiv">
-          <Button bsStyle="warning" bsSize="xsmall" onClick={this.decrementNote.bind(this)}><Glyphicon glyph="minus" /></Button>
           <Button bsStyle="warning" bsSize="xsmall" onClick={this.incrementNote.bind(this)}><Glyphicon glyph="plus"  /></Button>
+          <Button bsStyle="warning" bsSize="xsmall" onClick={this.decrementNote.bind(this)}><Glyphicon glyph="minus" /></Button>
         </div>
       </div>
     )

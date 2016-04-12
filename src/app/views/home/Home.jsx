@@ -1,10 +1,10 @@
-import React      from 'react';
-import Jumbotron  from '../../components/jumbotron/Jumbotron.jsx';
-import cardmodel  from '../../models/card.model.json';
-import Card       from '../../components/card/card.jsx';
-import classNames from 'classnames';
-import { Link }   from 'react-router';
-import { Input,Glyphicon } from 'react-bootstrap';
+import React                      from 'react';
+import Jumbotron                  from '../../components/jumbotron/Jumbotron.jsx';
+import cardmodel                  from '../../models/card.model.json';
+import Card                       from '../../components/card/card.jsx';
+import classNames                 from 'classnames';
+import { Link }                   from 'react-router';
+import { Input,Glyphicon }        from 'react-bootstrap';
 
 class Home extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class Home extends React.Component {
   render() {
     const { filteredData } = this.state;
     const items = filteredData.map((dataComFiltred,i) => {
-      return (  <div className="col-xs-3" key={i}><Card data={dataComFiltred}/></div>);
+      return (<div className="col-xs-4 col-sm-4 col-md-3 col-lg-3" key={i}><Card data={dataComFiltred}/></div>);
     });
     const innerGlyphicon = <Glyphicon glyph="search" />;
 
