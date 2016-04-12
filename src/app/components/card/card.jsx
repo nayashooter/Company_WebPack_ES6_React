@@ -58,12 +58,12 @@ class Card extends React.Component {
         <h2 className="card__title">{status}{this.props.data.company}</h2><span className="card__subtitle">  {this.props.data.description}</span>
         <div className="card__action-bar">
           <div className="card__button">
-            <Link to="/evaluate" >
+            <Link to="/evaluate" className="actionLink">
               EVALUATE
             </Link></div>
           <div className="card__button">
-            <Link to="/report" >
-              EVALUATE
+            <Link to="/report"  className="actionLink">
+              SEE ALL
             </Link>
           </div>
         </div>

@@ -74,8 +74,8 @@
 					"GetRequired":false
 				},
 				{
-					"Reference":"",
-					"Commentaire":"",
+					"Reference":"Test 2",
+					"Commentaire":"Test 2",
 					"Note":3,
 					"NoteString":"3",
 					"Critere":
@@ -125,9 +125,9 @@
 			"DataUser":
 			[
 				{
-					"Reference":"",
+					"Reference":"Test activity 2",
 					"Commentaire":"",
-					"Note":3,
+					"Note":2,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -140,7 +140,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":2,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -153,7 +153,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":2,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -166,7 +166,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":2,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -191,7 +191,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":1,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -204,7 +204,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":1,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -217,7 +217,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":1,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -230,7 +230,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":1,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -254,7 +254,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":0,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -267,7 +267,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":0,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -280,7 +280,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":0,
 					"NoteString":"3",
 					"Critere":
 					{
@@ -293,7 +293,7 @@
 				{
 					"Reference":"",
 					"Commentaire":"",
-					"Note":3,
+					"Note":0,
 					"NoteString":"3",
 					"Critere":
 					{

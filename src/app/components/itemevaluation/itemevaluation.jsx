@@ -1,5 +1,6 @@
-import React            from 'react';
-import { Input,Glyphicon } from 'react-bootstrap';
+import React                from 'react';
+import { Input,Glyphicon }  from 'react-bootstrap';
+import Note                 from '../note/note.jsx';
 
 class ItemEvaluation extends React.Component {
 
@@ -9,25 +10,35 @@ class ItemEvaluation extends React.Component {
   }
 
   init() {
-    this.state = {
-      Note: this.props.data.Note,
-      Commentaire: this.props.data.Commentaire,
-      Reference: this.props.data.Reference,
-    }
+  }
+
+  onChangeComment(e){
+    this.props.onCommentChange({comment: e.target.value,indexCritere:this.props.indexCritere,indexActivity:this.props.indexActivity});
+  }
+
+  onReferenceComment(e){
+    this.props.onReferenceChange({reference: e.target.value,indexCritere:this.props.indexCritere,indexActivity:this.props.indexActivity});
   }
 
   render() {
-    const styleLabel = {
-      width :"100%",
-    }
-
     return(
       <div className="panel panel-primary-vivinter">
+
         <div className="panel-heading">
             <h4>{this.props.item}</h4>
         </div>
+
         <div className="panel-body">
-          <div className="col-xs-2">{this.state.Note}</div>
+
+          <div className="col-xs-2">
+            <Note
+              note={this.props.data.Note}
+              onNoteChange={this.props.onNoteChange}
+              indexActivity={this.props.indexActivity}
+              indexCritere={this.props.indexCritere}
+              />
+          </div>
+
           <div className="col-xs-10" >
 
             <div className="well well-sm">
@@ -36,8 +47,9 @@ class ItemEvaluation extends React.Component {
               </h4>
               <Input
                 type="textarea"
-                rows="12">
-                {this.state.Reference}
+                rows="12"
+                value={this.props.data.Reference}
+                onChange={this.onReferenceComment.bind(this)}>
               </Input>
             </div>
 
@@ -47,15 +59,18 @@ class ItemEvaluation extends React.Component {
               </h4>
               <Input
                 type="textarea"
-                rows="12">
-                {this.state.Commentaire}
+                rows="12"
+                value={this.props.data.Commentaire}
+                onChange={this.onChangeComment.bind(this)}>
               </Input>
             </div>
+
           </div>
+
         </div>
+        
       </div>
     )
-
   }
 
 }

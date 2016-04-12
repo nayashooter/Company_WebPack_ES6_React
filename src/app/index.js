@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './components/card/card.style.scss';
 import './components/itemevaluation/itemevaluation.style.scss';
+import './components/note/note.style.scss';
 import '.'
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
